@@ -10,11 +10,20 @@ using System.Windows.Forms;
 
 namespace movieBonanza_a7
 {
-    public partial class Form1 : Form
+    public partial class splashScreen : Form
     {
-        public Form1()
+        public splashScreen()
         {
             InitializeComponent();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            progressBar1.Increment(1);
+            if (progressBar1.Value == 100)
+            {
+                timer1.Stop();
+            }
         }
     }
 }
